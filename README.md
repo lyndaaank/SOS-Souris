@@ -29,15 +29,21 @@ Java, JavaFX, FXML et Maven.
 
 ## Captures d’écran
 
-<img width="604" height="338" alt="1" src="https://github.com/user-attachments/assets/9f1f86bf-2bb6-4419-915c-b04723af5912" />
-<img width="653" height="367" alt="2" src="https://github.com/user-attachments/assets/894a6243-80b1-4975-bcc6-1f5b56a109b5" />
-<img width="629" height="352" alt="3" src="https://github.com/user-attachments/assets/f59a7b7e-9c97-4a7e-ae9b-2f685f89812b" />
-<img width="677" height="379" alt="4" src="https://github.com/user-attachments/assets/34a95ddd-3ff6-4bf7-be42-36301a462b75" />
-<img width="716" height="374" alt="5" src="https://github.com/user-attachments/assets/c66c8aac-be9f-44e0-b210-30e53b766c5a" />
-<img width="632" height="353" alt="6" src="https://github.com/user-attachments/assets/a41b3403-cae0-4e11-9129-30a62f4a588e" />
-<img width="656" height="371" alt="7" src="https://github.com/user-attachments/assets/91412a83-9dcd-4583-97d8-3b8f89570365" />
-<img width="653" height="381" alt="8" src="https://github.com/user-attachments/assets/ad36a1cd-a255-4aa8-b086-34f80f7dd1bd" />
+<img width="640" height="360" alt="Capture 1" src="https://github.com/user-attachments/assets/9f1f86bf-2bb6-4419-915c-b04723af5912" />
 
+<img width="640" height="360" alt="Capture 2" src="https://github.com/user-attachments/assets/894a6243-80b1-4975-bcc6-1f5b56a109b5" />
+
+<img width="640" height="360" alt="Capture 3" src="https://github.com/user-attachments/assets/f59a7b7e-9c97-4a7e-ae9b-2f685f89812b" />
+
+<img width="640" height="360" alt="Capture 4" src="https://github.com/user-attachments/assets/34a95ddd-3ff6-4bf7-be42-36301a462b75" />
+
+<img width="640" height="360" alt="Capture 5" src="https://github.com/user-attachments/assets/c66c8aac-be9f-44e0-b210-30e53b766c5a" />
+
+<img width="640" height="360" alt="Capture 6" src="https://github.com/user-attachments/assets/a41b3403-cae0-4e11-9129-30a62f4a588e" />
+
+<img width="640" height="360" alt="Capture 7" src="https://github.com/user-attachments/assets/91412a83-9dcd-4583-97d8-3b8f89570365" />
+
+<img width="640" height="360" alt="Capture 8" src="https://github.com/user-attachments/assets/ad36a1cd-a255-4aa8-b086-34f80f7dd1bd" />
 ## Vidéo de présentation
 
 // a ajouter
