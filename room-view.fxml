@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.shape.Ellipse?>
+<?import javafx.scene.shape.Rectangle?>
+
+<AnchorPane fx:id="roomRoot"
+            prefWidth="1672.0"
+            prefHeight="941.0"
+            focusTraversable="true"
+            stylesheets="@style-jeu.css"
+            xmlns="http://javafx.com/javafx/17"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.projetihm.application.Controllers.RoomController">
+
+    <ImageView fx:id="fondRoomImage"
+               fitWidth="1672.0"
+               fitHeight="941.0"
+               preserveRatio="false"/>
+
+    <Rectangle fx:id="zoneCables" layoutX="725.0" layoutY="430.0" width="235.0" height="150.0" fill="black" opacity="0.0"/>
+    <Rectangle fx:id="zoneRecherche" layoutX="1215.0" layoutY="625.0" width="145.0" height="85.0" fill="black" opacity="0.0"/>
+    <Rectangle fx:id="zoneLabyrinthe" layoutX="95.0" layoutY="675.0" width="280.0" height="70.0" fill="black" opacity="0.0"/>
+    <Rectangle fx:id="zoneSortie" layoutX="930.0" layoutY="420.0" width="295.0" height="130.0" fill="black" opacity="0.0"/>
+
+    <Rectangle fx:id="obstacleTableLabyrinthe" layoutX="25.0" layoutY="405.0" width="400.0" height="250.0" fill="black" opacity="0.0"/>
+    <Rectangle fx:id="obstaclePaillasse" layoutX="310.0" layoutY="295.0" width="420.0" height="175.0" fill="black" opacity="0.0"/>
+    <Rectangle fx:id="obstacleCommode" layoutX="1360.0" layoutY="390.0" width="285.0" height="280.0" fill="black" opacity="0.0"/>
+    <Rectangle fx:id="obstaclePorte" layoutX="995.0" layoutY="185.0" width="185.0" height="250.0" fill="black" opacity="0.0"/>
+    <Rectangle fx:id="obstacleInventaire" layoutX="0.0" layoutY="780.0" width="1672.0" height="161.0" fill="black" opacity="0.0"/>
+
+    <Rectangle fx:id="highlightCables" layoutX="805.0" layoutY="185.0" width="108.0" height="130.0" arcWidth="22.0" arcHeight="22.0" visible="false"/>
+    <Rectangle fx:id="highlightRecherche" layoutX="1402.0" layoutY="392.0" width="230.0" height="240.0" arcWidth="24.0" arcHeight="24.0" visible="false"/>
+    <Rectangle fx:id="highlightLabyrinthe" layoutX="55.0" layoutY="420.0" width="325.0" height="150.0" arcWidth="24.0" arcHeight="24.0" visible="false"/>
+    <Rectangle fx:id="highlightSortie" layoutX="1000.0" layoutY="185.0" width="180.0" height="235.0" arcWidth="28.0" arcHeight="28.0" visible="false"/>
+
+    <Label fx:id="cadenasCables" layoutX="839.0" layoutY="229.0" text="🔒" visible="false" styleClass="lock-zone-label"/>
+    <Label fx:id="cadenasRecherche" layoutX="1498.0" layoutY="493.0" text="🔒" visible="false" styleClass="lock-zone-label"/>
+    <Label fx:id="cadenasLabyrinthe" layoutX="198.0" layoutY="474.0" text="🔒" visible="false" styleClass="lock-zone-label"/>
+    <Label fx:id="cadenasSortie" layoutX="1064.0" layoutY="285.0" text="🔒" visible="false" styleClass="lock-zone-label"/>
+
+    <Ellipse fx:id="ombrePersonnage"
+             layoutX="838.0"
+             layoutY="700.0"
+             radiusX="58.0"
+             radiusY="15.0"
+             fill="black"
+             opacity="0.26"/>
+
+    <ImageView fx:id="personnageDosImage"
+               layoutX="760.0"
+               layoutY="510.0"
+               fitWidth="145.0"
+               preserveRatio="true"
+               smooth="true"
+               cache="true"/>
+
+    <StackPane fx:id="questionBubble"
+               layoutX="850.0"
+               layoutY="455.0"
+               prefWidth="42.0"
+               prefHeight="42.0"
+               visible="false"
+               styleClass="question-bubble">
+        <Label text="?" styleClass="question-bubble-text"/>
+    </StackPane>
+
+    <ImageView fx:id="cleInventaire1"
+               layoutX="1270.0"
+               layoutY="835.0"
+               fitWidth="36.0"
+               preserveRatio="true"
+               smooth="true"
+               visible="false"/>
+
+    <ImageView fx:id="cleInventaire2"
+               layoutX="1340.0"
+               layoutY="835.0"
+               fitWidth="36.0"
+               preserveRatio="true"
+               smooth="true"
+               visible="false"/>
+
+    <ImageView fx:id="cleInventaire3"
+               layoutX="1410.0"
+               layoutY="835.0"
+               fitWidth="36.0"
+               preserveRatio="true"
+               smooth="true"
+               visible="false"/>
+
+    <Label fx:id="chronoLabel"
+           layoutX="178.0"
+           layoutY="842.0"
+           prefWidth="320.0"
+           prefHeight="46.0"
+           alignment="CENTER"
+           text="15:00"
+           styleClass="chrono-label"/>
+
+    <Button layoutX="1518.0"
+            layoutY="832.0"
+            prefWidth="78.0"
+            prefHeight="78.0"
+            onAction="#rappelerAssistant"
+            text="?"
+            styleClass="assistant-help-button"/>
+
+    <AnchorPane fx:id="assistantPane"
+                layoutX="36.0"
+                layoutY="662.0"
+                prefWidth="760.0"
+                prefHeight="132.0"
+                visible="false">
+
+        <ImageView fx:id="assistantImage"
+                   layoutX="0.0"
+                   layoutY="0.0"
+                   fitWidth="100.0"
+                   preserveRatio="true"
+                   smooth="true"
+                   cache="false"/>
+
+        <ImageView fx:id="assistantBubbleImage"
+                   layoutX="112.0"
+                   layoutY="6.0"
+                   fitWidth="620.0"
+                   fitHeight="128.0"
+                   preserveRatio="false"
+                   smooth="true"
+                   cache="false"/>
+
+        <Label fx:id="assistantMessage"
+               layoutX="212.0"
+               layoutY="39.0"
+               prefWidth="445.0"
+               prefHeight="58.0"
+               alignment="CENTER_LEFT"
+               text="Bienvenue dans le laboratoire."
+               wrapText="true"
+               styleClass="dialogue-image-text"/>
+    </AnchorPane>
+
+</AnchorPane>

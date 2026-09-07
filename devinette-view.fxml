@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane fx:id="root"
+            prefWidth="1672.0"
+            prefHeight="941.0"
+            stylesheets="@style-jeu.css"
+            xmlns="http://javafx.com/javafx/17"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.projetihm.application.Controllers.DevinetteController">
+</AnchorPane>

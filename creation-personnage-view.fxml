@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Pos?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.transform.Scale?>
+
+<AnchorPane prefWidth="1672.0"
+            prefHeight="941.0"
+            stylesheets="@style-jeu.css"
+            style="-fx-background-color: #f0c181;"
+            xmlns="http://javafx.com/javafx/17"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.projetihm.application.Controllers.CreationPersonnageController">
+
+    <!-- Contenu légèrement dézoomé : le fond + les éléments restent alignés. -->
+    <Pane layoutX="42.0"
+          layoutY="24.0"
+          prefWidth="1672.0"
+          prefHeight="941.0">
+        <transforms>
+            <Scale x="0.95" y="0.95" pivotX="0" pivotY="0"/>
+        </transforms>
+
+    <!-- Image de fond déjà dessinée les éléments FXML sont placés dessus sans panneau flou. -->
+    <ImageView fitWidth="1672.0"
+               fitHeight="941.0"
+               preserveRatio="false">
+        <image>
+            <Image url="@images/personnages/fond_creationperso_VF.png"/>
+        </image>
+    </ImageView>
+
+    <!-- Aperçu personnage : recentré dans le badge. -->
+    <Pane layoutX="58.0"
+          layoutY="158.0"
+          prefWidth="420.0"
+          prefHeight="650.0">
+
+        <ImageView fx:id="personnageImage"
+                   layoutX="44.0"
+                   layoutY="98.0"
+                   fitWidth="345.0"
+                   preserveRatio="true"
+                   smooth="true"
+                   cache="true"/>
+
+        <ImageView fx:id="cheveuxImage"
+                   layoutX="44.0"
+                   layoutY="78.0"
+                   fitWidth="345.0"
+                   preserveRatio="true"
+                   smooth="true"
+                   cache="true"/>
+
+        <ImageView fx:id="lunettesImage"
+                   layoutX="44.0"
+                   layoutY="98.0"
+                   fitWidth="345.0"
+                   preserveRatio="true"
+                   smooth="true"
+                   cache="true"/>
+
+        <ImageView fx:id="badgeImage"
+                   layoutX="272.0"
+                   layoutY="338.0"
+                   fitWidth="72.0"
+                   preserveRatio="true"
+                   smooth="true"
+                   cache="true"
+                   visible="false">
+            <image>
+                <Image url="@images/personnages/badge_personnage.png"/>
+            </image>
+        </ImageView>
+    </Pane>
+
+    <!-- Nom placé sous le trait, aligné dans la zone du formulaire. -->
+    <TextField fx:id="nomField"
+               layoutX="630.0"
+               layoutY="315.0"
+               prefWidth="545.0"
+               prefHeight="56.0"
+               styleClass="name-field"/>
+
+    <!-- Couleur de la blouse  boutons propres, espacés comme dans un vrai menu de jeu. -->
+    <Button layoutX="630.0"
+            layoutY="512.0"
+            prefWidth="86.0"
+            prefHeight="72.0"
+            onAction="#choisirBlanc"
+            styleClass="color-white-button"/>
+
+    <Button layoutX="780.0"
+            layoutY="512.0"
+            prefWidth="86.0"
+            prefHeight="72.0"
+            onAction="#choisirBleu"
+            styleClass="color-blue-button"/>
+
+    <Button layoutX="930.0"
+            layoutY="512.0"
+            prefWidth="86.0"
+            prefHeight="72.0"
+            onAction="#choisirVert"
+            styleClass="color-green-button"/>
+
+    <Button layoutX="1080.0"
+            layoutY="512.0"
+            prefWidth="86.0"
+            prefHeight="72.0"
+            onAction="#choisirJaune"
+            styleClass="color-yellow-button"/>
+
+    <!-- Accessoires trois choix propres et alignés avec le formulaire. -->
+    <Button layoutX="630.0"
+            layoutY="686.0"
+            prefWidth="195.0"
+            prefHeight="90.0"
+            onAction="#toggleLunettes"
+            styleClass="accessory-card">
+        <graphic>
+            <VBox alignment="CENTER" spacing="4.0">
+                <ImageView fitWidth="60.0" fitHeight="34.0" preserveRatio="true" smooth="true">
+                    <image>
+                        <Image url="@images/personnages/icon_lunettes.png"/>
+                    </image>
+                </ImageView>
+                <Label text="LUNETTES" styleClass="accessory-text"/>
+            </VBox>
+        </graphic>
+    </Button>
+
+    <Button layoutX="855.0"
+            layoutY="686.0"
+            prefWidth="195.0"
+            prefHeight="90.0"
+            onAction="#toggleCheveux"
+            styleClass="accessory-card">
+        <graphic>
+            <VBox alignment="CENTER" spacing="4.0">
+                <ImageView fitWidth="62.0" fitHeight="40.0" preserveRatio="true" smooth="true">
+                    <image>
+                        <Image url="@images/personnages/icon_cheveux.png"/>
+                    </image>
+                </ImageView>
+                <Label text="CHEVEUX" styleClass="accessory-text"/>
+            </VBox>
+        </graphic>
+    </Button>
+
+    <Button layoutX="1080.0"
+            layoutY="686.0"
+            prefWidth="195.0"
+            prefHeight="90.0"
+            onAction="#toggleBadge"
+            styleClass="accessory-card">
+        <graphic>
+            <VBox alignment="CENTER" spacing="4.0">
+                <ImageView fitWidth="58.0" fitHeight="42.0" preserveRatio="true" smooth="true">
+                    <image>
+                        <Image url="@images/personnages/icon_badge.png"/>
+                    </image>
+                </ImageView>
+                <Label text="BADGE" styleClass="accessory-text"/>
+            </VBox>
+        </graphic>
+    </Button>
+
+    <!-- Actions finales placées plus à droite pour équilibrer la page. -->
+    <Button text="ALEATOIRE"
+            layoutX="1000.0"
+            layoutY="850.0"
+            prefWidth="220.0"
+            prefHeight="64.0"
+            onAction="#onAleatoireClick"
+            styleClass="secondary-button" />
+
+    <Button text="RETOUR"
+            layoutX="735.0"
+            layoutY="850.0"
+            prefWidth="220.0"
+            prefHeight="64.0"
+            onAction="#onRetourClick"
+            styleClass="back-button" />
+
+    <Button text="VALIDER"
+            layoutX="1265.0"
+            layoutY="850.0"
+            prefWidth="220.0"
+            prefHeight="64.0"
+            onAction="#onValiderClick"
+            styleClass="validate-button" />
+
+    </Pane>
+
+</AnchorPane>
